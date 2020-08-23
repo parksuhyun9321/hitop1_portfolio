@@ -1,0 +1,310 @@
+body {
+    font-family: 'Noto Sans KR',sans-serif;
+    color: #fff;
+    &.overHidden {
+        overflow: hidden;
+    }
+    &.mobile {
+        #quickMenu {
+            .menuList {
+                li {
+                    &:hover {
+                        a {
+                            &:after {
+                                opacity: 1;
+                            }
+                            .imgBox {
+                                img {
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #news {
+            .newsList {
+                li {
+                    &:hover {
+                        animation: none;
+                    }
+                }
+            }
+        }
+    }
+}
+#header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    z-index: 999;
+    transition: 0.25s ease;
+    &.on {
+        background-color: rgba(0,0,0,0.8);
+    }
+    #logo {
+        position: absolute;
+        top: 10px;
+        left: 90px;
+        a {
+            display: block;
+            img {
+                width: 120px;
+            }
+        }
+    }
+    #gnb {
+        .gnbList {
+            display: inline-block;
+            > li {
+                float: left;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 90px;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #f2f2f2;
+                    transform: scale(0);
+                    transition: 0.25s ease;
+                }
+                &:after {
+                    content: '';
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    background-color:#bf0c14 ;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    transition: 0.1s ease;
+                }
+                &:hover {
+                    background-color: #bf0c14;
+                    &:before {
+                        transform: scale(0.8);
+                    }
+                    &:after {
+                        display: block;
+                    }
+                }
+                .depth01 {
+                    position: relative;
+                    font-size: 2rem;
+                    height: 90px;
+                    line-height: 90px;
+                    padding: 0 60px;
+                }
+                .depth02 {
+                    display: none;
+                    li {
+                        a { 
+                            display: block;   
+                            font-size: 1.4rem;
+                            margin: 15px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .utilMenu {
+        position: absolute;
+        top: 50%;
+        right: 90px;
+        transform: translateY(-50%);
+        .btn {
+            display: inline-block;
+            font-size: 1.4rem;
+            padding: 15px 30px;
+            border: 1px solid #fff;
+            border-radius: 100px;
+            transition: 0.25s ease;
+            &:hover {
+                background-color: #bf0c14;
+                border-color: #bf0c14;
+            }
+        }
+        .btnMenu {
+            position: relative;
+            display: inline-block;
+            top: 5px;
+            left: 20px;
+            width: 30px;
+            height: 23px;
+            cursor: pointer;
+            span {
+                position: absolute;
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                &:nth-child(1){
+                    top: 0;
+                }
+                &:nth-child(2){
+                    top: 10px;
+                }
+                &:nth-child(3){
+                    top: 20px;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    background-color: #444;
+    color: #999;
+    padding-bottom: 30px;
+    .footerMenu {
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        li {
+            display: inline-block;
+            font-weight: 300;
+            &:nth-child(2) {
+                font-weight: 700;
+            }
+            &:last-child {
+                a {
+                    border-right: none;
+                }
+            }
+            a {
+                padding: 0 20px;
+                font-size: 1.4rem;
+                border-right: 1px solid rgba(255,255,255,0.3);
+            }
+        }
+    }
+    .inner {
+        width: 1100px;
+        margin: 0 auto;
+        padding: 20px 0 10px;
+        #fLogo {
+            display: inline-block;
+            img {
+                width: 140px;
+            }
+        }
+        address {
+            display: inline-block;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            margin-left: 50px;
+            .copy {
+                margin-top: 20px;
+                opacity: 0.5;
+            }
+        }
+        .callCenter {
+            float: right;
+            font-size: 1.4rem;
+            strong {
+                display: inline-block;
+                font-size: 4rem;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+#siteMap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 999999;
+    color: #333;
+    display: none;
+    .siteInner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1000px;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+        .title {
+            position: relative;
+                background: linear-gradient(to right,#d64f17, #c41a15);
+                color: #fff;
+                height: 60px;
+                text-align: center;
+            h2 {
+                font-size: 3rem;
+                letter-spacing: 5px;
+                height: 60px;
+                line-height: 60px;
+                display: inline;
+                
+            }
+            .btnClose {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                width: 30px;
+                height: 60px;
+                line-height: 60px;
+                margin-right: 20px;
+                cursor: pointer;
+                span {
+                    position: absolute;
+                    display: block;
+                    background-color: #fff;
+                    width: 30px;
+                    height: 4px;
+                    &:first-child{
+                        transform: rotate(45deg);
+                    }
+                    &:last-child{
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+        .sitemapList {
+            display: inline-block;
+            padding: 25px 0 25px 50px;
+            width: 100%;
+            > li {
+                float: left;
+                width: 20%;
+                .siteDepth01 {
+                    font-size: 2rem;
+                    color: #bf0c14;
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 150px;
+                        height: 2px;
+                        background-color: #bf0c14;
+                        margin: 20px 0 30px;
+                    }
+                }
+                .siteDepth02 {
+                    font-size: 1.4rem;
+                    li {
+                        a {
+                            display: block;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

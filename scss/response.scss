@@ -1,0 +1,426 @@
+@media all and(max-width:1600px){ // header
+    #header {
+        text-align: left;
+        background-color:#000 ;
+        #gnb {
+            position:fixed;
+            top: 90px;
+            width: 200px;
+            height: 100%;
+            background-color: #000;
+            right: -100%;
+            transition: 0.25s ease;
+            &.on {
+                right: 0;
+            }
+            .gnbList {
+                display: block;
+                > li {
+                    float: none;
+                    &:hover {
+                        background:none;
+                        &:after{
+                            display: none;
+                        }
+                        &:before {
+                            transform: scale(0);
+                        }
+                    }
+                   .depth01 {
+                       position: relative;
+                       padding: 0;
+                       height: 0;
+                       line-height: 0;
+                       color: #fff;
+                       padding: 30px 0 30px 20px;
+                       display: inline-block;                  
+                   }
+                   .depth02 {
+                       color: #f2f2f2;
+                       li {
+                           width: 100%;
+                           &:hover {
+                              a {
+                                  &:before {
+                                      opacity: 1;
+                                  }
+                              }
+                           }
+                           a {
+                               position: relative;
+                               margin: 0;
+                               padding: 10px 0 10px 20px;
+                               font-size: 1.4rem;
+                               &:before {
+                                   content: '';
+                                   display: block;
+                                   width: 5px;
+                                   height: 5px;
+                                   background-color: #fff;
+                                   border-radius: 100px;
+                                   position:absolute;
+                                   top: 50%;
+                                   left: 10px;
+                                   transform: translateY(-50%);
+                                   opacity: 0;
+                                   transition: 0.25s ease;
+                               }
+                           }
+                       }
+                   }
+                }
+            }
+        }
+    }
+}
+
+@media all and(max-width:1220px){ // mainVisual quickMenu business news footer
+    #mainVisual {
+        .mask {
+            ul {
+                li {
+                    background-position: -90% 50%;
+                }
+            }
+        }
+        .txtBox {
+            h3 {
+                font-size: 5rem;
+                line-height: 1.3;
+            }
+            p {
+                font-size: 1.6rem;
+                word-break: keep-all;
+            }
+        }
+    }
+    #quickMenu {
+        width: 100%;
+        margin: 0;
+        .menuList {
+            li {
+                width: 33.33%;
+            }
+        }
+    }
+    #business {
+        .title {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        .fiedList {
+            width: 100%;
+            margin: 0;
+            li {
+                width: 50%;
+                height: 100% !important;
+                margin: 0;
+                padding: 15px;
+                &:hover {
+                    a {
+                        .imgBox {
+                            img {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+                a {
+                    .imgBox {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .txtBox {
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #news {
+        width: 100%;
+        margin: 0 auto 80px;
+        .title {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        .newsList {
+            li {
+                width:45%;
+                margin: 0 2.5%;
+                &:nth-child(2){
+                    display: none;
+                }
+                a {
+                    .infoBox {
+                        h3 {
+                            font-size: 1.6rem;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #footer {
+        .inner {
+            width: 100%;
+            #fLogo {
+                margin-left: 20px;
+            }
+            .callCenter {
+                display: none;
+            }
+        }
+    }
+}
+
+@media all and(max-width:996px){ // mainVisual quickMenu footer
+    #mainVisual {
+        .mask {
+            ul {
+                li {
+                    width: 100% !important;
+                    height: 600px;
+                }
+            }
+        }
+        .txtBox {
+            
+            h3 {
+                font-size: 2.6rem;
+                line-height: 1.3;
+            }
+            p {
+                font-size: 1rem;
+                br {
+                    display: none;
+                }
+            }
+        }
+        .scroll {
+           bottom:10% ;
+        }
+    }
+    #quickMenu {
+        .menuList {
+            li {
+                a {
+                    .txtBox {
+                        h3 {
+                            font-size: 1.2rem;  
+                        }
+                        p {
+                            font-size: 1.6rem;
+                        }    
+                    }
+                }
+            }
+
+        }
+    }
+    #business {
+        .fiedList {
+            li {
+                a {
+                    .txtBox {
+                        p {
+                            word-break: keep-all;
+                            line-height: 1.3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #footer {
+        text-align: center;
+        .inner {
+            #fLogo {
+                display: none;
+            }
+            address {
+                margin-left: 0;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+@media all and(max-width:650px){// header quickMenu quickMenuSlide business footer
+    #header {
+        #logo {
+            left: 30px;
+        }
+        .utilMenu {
+            right: 45px;
+            .btn {
+                display: none;
+            }
+        }
+    }
+    #quickMenu {
+        padding: 15px;
+        display: none;
+    }
+    #quickMenuSlide {
+        display: block;
+    }
+    #business {
+        .fiedList {
+            li {
+                width: 100%;
+                a {
+                    .txtBox{
+                        left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    #customer {
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 250px;
+        padding: 25px 0;
+        .txtBox {
+            h3 {
+                font-size: 3rem;
+                &:after {
+                    margin: 20px 0;
+                }
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    #footer {
+        .footerMenu {
+            li {
+                a {
+                    font-size: 1.2rem;
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:420px) {// mainVisual business news customer footer
+    #mainVisual {
+        .txtBox {
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
+        }
+        .btnPrev {
+            top: 70%;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            i {
+                font-size: 1.6rem;
+            }
+        }
+        .btnNext {
+            top: 70%;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            i {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    #business {
+        .title {
+            h3 {
+                font-size: 2.6rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+        }
+        .fiedList {
+            li {
+                a {
+                    .txtBox {
+                        p {
+                            line-height: 1.4;
+                            br {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #news {
+        .title {
+            h3 {
+                font-size: 2.6rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+        }
+        .newsList {
+            li {
+                &:hover {
+                    animation: none;
+                }
+            }
+        }
+    }
+    #customer {
+        .txtBox {
+            h3 {
+                font-size: 2.2rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    #footer {
+        .footerMenu {
+            li {
+                &:last-child {
+                    a {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+                a {
+                    position: relative;
+                    padding: 0 3px;
+                    border: none;
+                    font-size: 1rem;
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 1px;
+                        height: 7px;
+                        background-color: rgba(255,255,255,0.5);
+                        position: absolute;
+                        top: 50%;
+                        right: -2px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+        .inner {
+            address {
+                word-break: keep-all;
+            }
+        }
+    }
+}
