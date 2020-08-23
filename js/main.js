@@ -96,7 +96,7 @@ $(window).on("resize",function(){
     if (w <= 1600) {
         if(!$("body").hasClass("resize")){
             $("body").addClass("resize");
-            
+            $("body").removeClass("overHidden");
         }
         $("#siteMap").hide();
         $(".btnMenu").show();
