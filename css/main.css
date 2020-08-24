@@ -7,6 +7,7 @@
   width: 100%;
   height: 100vh;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #mainVisual .mask ul li.visual01 {
@@ -202,7 +203,8 @@
   height: 100%;
   background: url("../images/index/business/businessField_bg.jpg") no-repeat;
   background-size: cover;
-  margin-top: 70px;
+  margin: 70px 0;
+  padding-bottom: 150px;
 }
 
 #business .title {
@@ -223,14 +225,8 @@
 }
 
 #business .inner {
-  margin: 0 auto;
-  width: 1100px;
-}
-
-#business .inner .fiedList {
   width: 1100px;
   margin: 0 auto;
-  padding-bottom: 150px;
 }
 
 #business .inner .fiedList li {
