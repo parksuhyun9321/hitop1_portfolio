@@ -76,13 +76,6 @@
 
 @media all and(max-width:1220px){ // mainVisual quickMenu business news footer
     #mainVisual {
-        .mask {
-            ul {
-                li {
-                    background-position: -90% 50%;
-                }
-            }
-        }
         .txtBox {
             h3 {
                 font-size: 5rem;
@@ -97,9 +90,13 @@
     #quickMenu {
         width: 100%;
         margin: 0;
-        .menuList {
-            li {
-                width: 33.33%;
+        .inner {
+            width: 100%;
+            margin: 0;
+            .menuList {
+                li {
+                    width: 33.33%;
+                }
             }
         }
     }
@@ -109,32 +106,34 @@
                 font-size: 1.2rem;
             }
         }
-        .fiedList {
+        .inner {
             width: 100%;
             margin: 0;
-            li {
-                width: 50%;
-                height: 100% !important;
-                margin: 0;
-                padding: 15px;
-                &:hover {
-                    a {
-                        .imgBox {
-                            img {
-                                transform: scale(1);
+            .fiedList {
+                li {
+                    width: 50%;
+                    height: 100% !important;
+                    margin: 0;
+                    padding: 15px;
+                    &:hover {
+                        a {
+                            .imgBox {
+                                img {
+                                    transform: scale(1);
+                                }
                             }
                         }
                     }
-                }
-                a {
-                    .imgBox {
-                        img {
-                            width: 100%;
+                    a {
+                        .imgBox {
+                            img {
+                                width: 100%;
+                            }
                         }
-                    }
-                    .txtBox {
-                        p {
-                            font-size: 1.2rem;
+                        .txtBox {
+                            p {
+                                font-size: 1.2rem;
+                            }
                         }
                     }
                 }
@@ -227,6 +226,7 @@
     #business {
         .fiedList {
             li {
+                width: 100% !important;
                 a {
                     .txtBox {
                         p {
