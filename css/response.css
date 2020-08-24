@@ -146,6 +146,9 @@
     width: 100% !important;
     height: 600px;
   }
+  #mainVisual .txtBox {
+    top: 40%;
+  }
   #mainVisual .txtBox h3 {
     font-size: 2.6rem;
     line-height: 1.3;
@@ -157,7 +160,7 @@
     display: none;
   }
   #mainVisual .scroll {
-    bottom: 10%;
+    bottom: 35%;
   }
   #quickMenu .menuList li a .txtBox h3 {
     font-size: 1.2rem;
