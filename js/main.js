@@ -1,13 +1,13 @@
 $("#gnb .gnbList > li").on("mouseenter",function(){
     if(!$("body").hasClass("resize")){
-        $(".depth02",this).stop().slideDown(250);
+        $(".depth02",this).stop().slideDown(150);
     }
 
 });
 
 $("#gnb .gnbList > li").on("mouseleave",function(){
     if(!$("body").hasClass("resize")){
-        $(".depth02",this).stop().slideUp(250);
+        $(".depth02",this).stop().slideUp(150);
     }
 });
 
