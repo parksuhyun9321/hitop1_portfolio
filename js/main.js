@@ -13,12 +13,6 @@ $("#gnb .gnbList > li").on("mouseleave",function(){
 
 // navigation
 
-$("#gnb .gnbList > li .depth01").on("click",function() {
-    $(this).next(".depth02").stop().slideToggle();
-    $(this).parent().siblings().find(".depth02").stop().slideUp();
-    return false;
-});
-
 $(".utilMenu .btnMenu").on("click",function(){
     if(!$("body").hasClass("resize")){
         $("#siteMap").fadeIn(250);
@@ -98,6 +92,11 @@ $(window).on("resize",function(){
             $("body").addClass("resize");
             $("body").removeClass("overHidden");
         }
+        $("#gnb .gnbList > li .depth01").on("click",function() {
+            $(this).next(".depth02").stop().slideToggle();
+            $(this).parent().siblings().find(".depth02").stop().slideUp();
+            return false;
+        });
         $("#siteMap").hide();
         $(".btnMenu").show();
     } else {
