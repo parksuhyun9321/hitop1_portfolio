@@ -1,9 +1,6 @@
 body {
     font-family: 'Noto Sans KR',sans-serif;
     color: #fff;
-    &.overHidden {
-        overflow: hidden;
-    }
     &.mobile {
         #quickMenu {
             .menuList {
@@ -73,18 +70,6 @@ body {
                     background-color: #f2f2f2;
                     transform: scale(0);
                     transition: 0.25s ease;
-                }
-                &:after {
-                    content: '';
-                    display: none;
-                    width: 100%;
-                    height: 100%;
-                    background-color:#bf0c14 ;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
-                    transition: 0.1s ease;
                 }
                 &:hover {
                     background-color: #bf0c14;
