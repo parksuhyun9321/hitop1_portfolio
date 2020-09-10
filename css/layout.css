@@ -3,8 +3,8 @@ body {
   color: #fff;
 }
 
-body.overHidden {
-  overflow: hidden;
+body.overHidden::-webkit-scrollbar {
+  display: none;
 }
 
 body.mobile #quickMenu .menuList li:hover a:after {
@@ -67,19 +67,6 @@ body.mobile #news .newsList li:hover {
   background-color: #f2f2f2;
   transform: scale(0);
   transition: 0.25s ease;
-}
-
-#header #gnb .gnbList > li:after {
-  content: '';
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: #bf0c14;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: 0.1s ease;
 }
 
 #header #gnb .gnbList > li:hover {
