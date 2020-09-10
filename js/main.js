@@ -16,7 +16,6 @@ $("#gnb .gnbList > li").on("mouseleave",function(){
 $(".utilMenu .btnMenu").on("click",function(){
     if(!$("body").hasClass("resize")){
         $("#siteMap").fadeIn(250);
-        $("body").addClass("overHidden");
         $(".btnMenu").hide();
     } else {
         if($("body").hasClass("resize")){
@@ -90,7 +89,6 @@ $(window).on("resize",function(){
     if (w <= 1600) {
         if(!$("body").hasClass("resize")){
             $("body").addClass("resize");
-            $("body").removeClass("overHidden");
         }
         $("#gnb .gnbList > li .depth01").on("click",function() {
             $(this).next(".depth02").stop().slideToggle();
@@ -100,7 +98,8 @@ $(window).on("resize",function(){
         $("#siteMap").hide();
         $(".btnMenu").show();
     } else {
-        if($("body").removeClass("resize")){;
+        if(w > 1600 && $("body").hasClass("resize")){
+            $("body").removeClass("resize");
         }
     }
 });
