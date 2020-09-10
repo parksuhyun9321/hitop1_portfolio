@@ -100,6 +100,8 @@ $(window).on("resize",function(){
     } else {
         if(w > 1600 && $("body").hasClass("resize")){
             $("body").removeClass("resize");
+            $("#gnb .gnbList > li .depth01").unbind();
+            $("#gnb .gnbList > li .depth02").hide();
         }
     }
 });
